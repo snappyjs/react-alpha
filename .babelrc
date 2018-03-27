@@ -1,0 +1,12 @@
+{
+    "presets": ["react", "babel-preset-env"],
+    "plugins": ["transform-object-rest-spread"],
+    "env": {
+        "test": {
+            "plugins": [["babel-plugin-webpack-alias", { "config": "./webpack.config.js" }]]
+        },
+        "development": {
+            "plugins": ["react-hot-loader/babel"]
+        }
+    }
+}

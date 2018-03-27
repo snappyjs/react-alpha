@@ -1,0 +1,70 @@
+@import '~styles/variables';
+@import '~styles/mixins';
+
+// ---------------
+// Container
+// ---------------
+.container {
+    margin: 0 auto;
+    max-width: $gridWidth;
+    box-sizing: border-box;
+}
+
+.fluid {
+    width: 100%;
+}
+
+// ---------------
+// Row
+// ---------------
+.row {
+    @extend %clearfix;
+    & + & {
+        margin-top: $gridSpacing;
+    }
+}
+
+// --------------
+// Column
+// -------------
+
+.gridColumn {
+    float: left;
+    box-sizing: border-box;
+    padding: $gridPadding;
+    margin-right: $gridSpacing;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+@function colWidth($i) {
+    @return 100% / $gridColumns * $i - $gridSpacing;
+}
+
+// Small sizses
+@include small {
+    @for $i from 1 through $gridColumns {
+        .sm-#{$i} {
+            width: colWidth($i);
+        }
+    }
+}
+
+// Medium sizes
+@include medium {
+    @for $i from 1 through $gridColumns {
+        .md-#{$i} {
+            width: colWidth($i);
+        }
+    }
+}
+
+// Large sizes
+@include large {
+    @for $i from 1 through $gridColumns {
+        .lg-#{$i} {
+            width: colWidth($i);
+        }
+    }
+}

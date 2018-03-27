@@ -1,0 +1,4 @@
+--require babel-register
+--require ./client/test/helpers/dom.js
+--require ./client/test/helpers/ignores.js
+--require ./client/test/helpers/globals.js

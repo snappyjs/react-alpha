@@ -1,0 +1,15 @@
+.info {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.12);
+    padding: 25px;
+    background: #efefef;
+
+    code {
+        background: #ccc;
+        font-style: italic;
+        padding: 2px 5px;
+        font-size: 0.9em;
+        border-radius: 5px;
+    }
+}

@@ -1,0 +1,27 @@
+@import '~styles/variables';
+
+// ----------------
+// Extends
+// ----------------
+%clearfix:after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+// ----------------
+// Media Queries (mobile first approach)
+// ----------------
+@mixin small {
+    @content;
+}
+@mixin medium {
+    @media (min-width: #{$mediumWidth}) {
+        @content;
+    }
+}
+@mixin large {
+    @media (min-width: #{$largeWidth}) {
+        @content;
+    }
+}
